@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(199, 224, 162);
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+.notes-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+}
+
+.app-header__title {
+  margin: 10px 20px 0px;
+  background-color: rgb(230, 245, 208);
+  font-family: 'Lora', serif;
+  font-weight: lighter;
+  letter-spacing: .1rem;
+  text-align: center;
+  padding: .5rem 1rem;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.app-header__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+
+.search,
+.add-new {
+  font-size: 14px;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.add-new {
+  cursor: pointer;
+  padding: 8px;
+  font-family: 'Lora', serif;
+  font-weight: lighter;
+  background-color: #daffd2;
+  outline: none;
+}
+
+.note {
+  font-family: "Permanent Marker", cursive;
+  width: 40%;
+  min-width: 12rem;
+  max-width: 14rem;
+  height: 14rem;
+  margin: 10px;
+  background-color: lightyellow;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 3px lightgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.note__title,
+.note__description {
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+}
+
+.note__title {
+  font-size: 1.5rem;
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: bold;
+}
+
+.note__description {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.note__delete {
+  font-family: 'Nanum Pen Script', cursive;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 2rem;
+  color: lightgrey;
+  padding: 5px;
+}
+
+.note__delete:hover {
+  color: black;
+  cursor: pointer;
+}
